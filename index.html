@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[white]">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>Fanatech Frontend coding test</title>
+	</head>
+	<body class="max-w-[1440px] m-auto">
+		<header class="w-[100%] md:px-[100px] px-[8px] bg-[#EFF4ED]">
+			<!-- navbar  -->
+			<nav class="flex between items-center  md:py-[14px]">
+				<div>
+					<img src="./FoodTime.png" alt="logo" />
+				</div>
+				<button class="btn lg:hidden ms-auto" onclick="handleMenuToggle()">
+					<img
+						src="./menu.png"
+						width="30px"
+						height="30px"
+						alt="menu" />
+				</button>
+				<div class="flex ms-auto items-center md:gap-[100px] links transition-[left] ease-in-out delay-150 gap-[15px] absolute lg:static left-[-999px] top-[70px] flex-col md:flex-row md:items-center justify-evenly">
+					<div
+						class="flex gap-[40px] md:gap-[70px] ">
+						<a href="#">Home</a>
+						<a href="#">Blog</a>
+						<a href="#">About us</a>
+						<a href="#" class="flex items-center justify-center">
+							<span>EN</span>
+							<div>
+								<img
+									src="./Vector (1).png"
+									width="10px"
+									height="10px"
+									alt="icon" />
+							</div>
+						</a>
+					</div>
+					<div class="flex gap-[23px]">
+						<button
+							class="w-[154px] py-[12px] px-[50px] rounded-[225px] text-[white] bg-[#396C03]">
+							Login
+						</button>
+						<button class="relative">
+							<span
+								class="absolute w-[26px] h-[26px] rounded-[50%] bg-[#FF8B00] top-0 right-0 text-[white]"
+								>2</span
+							>
+							<img
+								src="./Group 3.png"
+								width="65px"
+								height="65px"
+								alt="cart" />
+						</button>
+					</div>
+				</div>
+			</nav>
+			<hr>
+		</header>
+		<!-- script for menu toggling -->
+		<script>
+			let toggle = false;
+			const handleMenuToggle = () => {
+				toggle = !toggle;
+				const elem = document.querySelector(".links");
+				toggle
+					? elem.classList.add("left-[1rem]")
+					: elem.classList.remove("left-[1rem]");
+			};
+		</script>
+	</body>
+</html>
